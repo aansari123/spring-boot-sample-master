@@ -12,7 +12,8 @@ node {
     }
 
     stage('Checkout') {
-        git 'https://github.com/bertjan/spring-boot-sample'
+        git 'https://github.com/aansari123/spring-boot-sample-master.git'
+		
     }
 
     stage('Version') {
