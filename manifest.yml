@@ -1,0 +1,9 @@
+---
+applications:
+- name: spring-boot-sample
+  host: spring-boot-sample-cloudfoundry
+  path: target/spring-boot-sample.jar
+  memory: 256M
+  disk_quota: 256M
+  instances: 1
+random-route: true
