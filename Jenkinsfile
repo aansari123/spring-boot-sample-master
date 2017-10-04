@@ -17,7 +17,7 @@ node {
     }
 
     stage('Version') {
-        //bat "echo \'\ninfo.build.version=\'$version >> src/main/resources/application.properties || true"
+        echo "version=${version}"
         //bat "mvn -B -V -U -e versions:set -DnewVersion=$version"
 		//mvn -B -V -U -e versions:set -DnewVersion=$version
 		mvn versions:set -DnewVersion=<version>
