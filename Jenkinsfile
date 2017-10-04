@@ -18,11 +18,12 @@ node {
 
     stage('Version') {
         //bat "echo \'\ninfo.build.version=\'$version >> src/main/resources/application.properties || true"
-        bat "mvn -B -V -U -e versions:set -DnewVersion=$version"
+        //bat "mvn -B -V -U -e versions:set -DnewVersion=$version"
+		mvn -B -V -U -e versions:set -DnewVersion=$version
     }
 
     stage('Build') {
-        bat 'mvn -B -V -U -e clean package'
+        mvn -B -V -U -e clean package
     }
 
     stage('Archive') {
