@@ -26,7 +26,8 @@ node {
     }
 
     stage('Build') {
-        mvn -B -V -U -e clean package
+        //mvn -B -V -U -e clean package
+		mvn clean package
     }
 
     stage('Archive') {
