@@ -18,11 +18,11 @@ node {
 
     stage('Version') {
         echo "version=${version}"
-		bat 'set M2_HOME=E:\apache-maven-3.3.9'
-		bat 'set path=E:\apache-maven-3.3.9\bin:%path%;'
+		//bat 'set M2_HOME=E:\apache-maven-3.3.9'
+		//bat 'set path=E:\apache-maven-3.3.9\bin:%path%;'
         //bat "mvn -B -V -U -e versions:set -DnewVersion=$version"
 		//mvn -B -V -U -e versions:set -DnewVersion=$version
-	    mvn versions:set -DnewVersion=<version>
+	    bat mvn versions:set -DnewVersion=<version>
     }
 
     stage('Build') {
