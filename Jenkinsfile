@@ -23,6 +23,9 @@ node {
         //bat "mvn -B -V -U -e versions:set -DnewVersion=$version"
 		//mvn -B -V -U -e versions:set -DnewVersion=$version
 	    //bat mvn versions:set -DnewVersion=<version>
+		def mvnHome = tool 'Maven_3.3.9'
+		bat "${mvnHome}/bin/mvn -B verify"
+
     }
 
     stage('Build') {
