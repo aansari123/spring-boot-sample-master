@@ -22,7 +22,7 @@ node {
 		//bat 'set path=E:\apache-maven-3.3.9\bin:%path%;'
         //bat "mvn -B -V -U -e versions:set -DnewVersion=$version"
 		//mvn -B -V -U -e versions:set -DnewVersion=$version
-	    bat mvn versions:set -DnewVersion=<version>
+	    //bat mvn versions:set -DnewVersion=<version>
     }
 
     stage('Build') {
